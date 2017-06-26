@@ -46,5 +46,5 @@ class HouseSpider(scrapy.Spider):
         item['twitterlink2'] = [w for w in item['link2'] if "twitter.com" in w]
         for url in item['twitterlink2']:
             item['twitterlinku'].append(url)
-
-        yield item
+            print (url)
+        yield item['twitterlinku']
